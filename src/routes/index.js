@@ -12,24 +12,26 @@ const routes = {
 }
 
 const router = async () => {
+  let endpoint
   const header = null || document.getElementById('header')
-  const search = null || document.getElementById('search')
   const content = null || document.getElementById('content')
 
-  let render
-
-  const endpoint = getSearch()
-  if(endpoint){
-    console.log('endpoint:', endpoint);
-    const route = await resolveRoutes(endpoint)
-    render = routes[route] && routes[route] 
-  }else{
-    render = routes['/']
-  } 
-
   header.innerHTML = await Header()
-  search.innerHTML = await Search()
-  content.innerHTML = await render()
+  Search()
+
+  const form = document.getElementById('form')
+  
+  form.addEventListener('submit', async (e)=>{
+    e.preventDefault()
+    endpoint = `c=${e.target[0].value}`
+    const route = await resolveRoutes(endpoint)
+    console.log(route);
+    let render = routes[route] && routes[route]    
+  
+    content.innerHTML = await render(endpoint)
+  })
+
+  
 }
 
 export default router

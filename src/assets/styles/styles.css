@@ -11,7 +11,7 @@ body{
 }
 
 .header-main-container{
-  height: 70vh;
+  height: 50vh;
   background-image: url('../img/wave.svg');
   background-position: top;
   background-repeat: no-repeat;
@@ -73,4 +73,9 @@ select:focus{
   color: #1b1717;
   border: 2px solid #1b1717;
   transform: scale(1.2);
+}
+
+.drinksContainer{
+  display: flex;
+  flex-wrap: wrap;
 }

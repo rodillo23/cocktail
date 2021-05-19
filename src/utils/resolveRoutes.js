@@ -1,16 +1,10 @@
 const resolveRoutes = (route)=>{
   if(route.length >= 1){
-    let validRoute
     if(route === '/'){
-      validRoute = route
-      return
-    } else if(route.includes('=')){
-      validRoute = '/drinks'
-      return
+      return route
+    }else{
+      return '/drinks'
     }
-
-    validRoute = `/${route}`
-
   }
 }
 
