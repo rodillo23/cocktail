@@ -28,20 +28,49 @@ body{
   height: 70px;
 }
 
-select{
+.search{
+  padding-top: 100px;
+  text-align: center;
+}
+
+.search select{
   display: block;
   font-size: 16px;
   font-family: 'Verdana', sans-serif;
   font-weight: 700;
   color: #1b1717;
   line-height: 1.5;
-  padding: .5em 1em;
-  width: 400px;
+  padding: 1em 1em;
+  width: 500px;
   max-width: 100%;
   box-sizing: border-box;
   margin: 20px auto;
   border: 2px solid #1b1717;
   border-radius: 10px;
   box-shadow: 0 1px 0 1px rgba(0,0,0,.05);
+  background-color: white;
+  margin-bottom: 50px;
+}
 
+select:focus{
+  outline: none;
+}
+
+.button{
+  background-color: #1b1717;
+  color: white;
+  padding: 20px;
+  border: none;
+  border-radius: 15px;
+  font-family: 'Gochi Hand';
+  font-size: 24px;
+  cursor: pointer;
+  transition: .4s ease;
+}
+
+.button:hover{
+  background-color: white;
+  color: #1b1717;
+  border: 2px solid #1b1717;
+  transform: scale(1.2);
 }
