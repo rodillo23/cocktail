@@ -1,9 +1,11 @@
 
 const getData = async(endpoint)=>{
   const API_BASE = 'https://www.thecocktaildb.com/api/json/v1/1/'
-
+  var API
   if(endpoint.includes('=')){
-    var API = `${API_BASE}filter.php?${endpoint}`
+    API = `${API_BASE}filter.php?${endpoint}`
+  }else{
+    API = `${API_BASE}lookup.php?i=${endpoint}`
   }
 
   try {

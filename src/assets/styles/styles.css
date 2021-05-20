@@ -76,6 +76,53 @@ select:focus{
 }
 
 .drinksContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.card{
+  border-radius: 10px;
+  height: 350px;
+  overflow: hidden;
+  width: 300px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.card img{
+  width: 100%;
+}
+
+.card p{
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.drinkContainer{
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.drinkImageContainer{
+  border-radius: 15px;
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  margin-bottom: 100px;
+  box-sizing: border-box;
+}
+
+.drinkContainer img{
+  width: 100%;
+  height: auto;
+}
+
+.drinkDetailsContainer{
+  width: 700px;
+  text-align: start;
+}
+
+.drinkTitle{
+  font-size: 30px;
+  font-weight: bold;
 }

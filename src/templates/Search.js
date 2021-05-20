@@ -24,12 +24,12 @@ import resolveRoutes from '../utils/resolveRoutes'
 
 */
 
+const content = document.getElementById('search')
 
-const Search = async()=>{
-  let route 
-
+const Search = async()=>{ 
+  
   const categories = await getDataList()
-  const content = document.getElementById('search')
+  
 
   const form = document.getElementById('form')
   const select = document.createElement('select')
@@ -40,6 +40,8 @@ const Search = async()=>{
 
   input.setAttribute('type', 'submit')
   input.setAttribute('value', 'Buscar')
+  input.classList.add('button')
+
 
   categories.drinks.map(drink => {
     const option = document.createElement('option')
